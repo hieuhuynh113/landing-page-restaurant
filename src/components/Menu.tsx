@@ -1,7 +1,23 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 
-const menuItems = [
+interface DishDetails {
+  ingredients: string;
+  preparation: string;
+  allergens: string;
+  dietary: string;
+  pairings: string;
+}
+
+interface MenuItem {
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  details: DishDetails;
+}
+
+const menuItems: MenuItem[] = [
   {
     name: "Pan-Seared Scallops",
     description: "Fresh sea scallops with citrus butter sauce",
@@ -19,7 +35,7 @@ const menuItems = [
     name: "Wagyu Beef Steak",
     description: "Premium grade wagyu with truffle sauce",
     price: "$65",
-    image: "https://images.unsplash.com/photo-1546833160-1c5dc35f0d5f?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.dukeshill.co.uk/cdn/shop/collections/Wagyu_RibEye_For_Web_03.jpg?v=1714563513",
     details: {
       ingredients: "A5 Wagyu beef, black truffle sauce, roasted garlic, seasonal vegetables",
       preparation: "Grilled to your preference, our premium Wagyu beef is served with a rich black truffle sauce, accompanied by roasted garlic and seasonal vegetables.",
@@ -53,14 +69,66 @@ const menuItems = [
       dietary: "Gluten-free",
       pairings: "Excellent with our Pinot Noir"
     }
-  }
+  },
+  {
+    name: "Grilled Salmon",
+    description: "Fresh salmon fillet with lemon dill sauce",
+    price: "$28",
+    image: "https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg",
+    details: {
+      ingredients: "Salmon fillet, lemon, dill, olive oil, sea salt",
+      preparation: "Grilled to perfection, our salmon is served with a zesty lemon dill sauce that complements its rich flavor.",
+      allergens: "Fish",
+      dietary: "Gluten-free",
+      pairings: "Pairs well with our Sauvignon Blanc"
+    }
+  },
+  {
+    name: "Vegetable Stir-Fry",
+    description: "A medley of seasonal vegetables in a savory sauce",
+    price: "$22",
+    image: "https://images.themodernproper.com/billowy-turkey/production/posts/VegetableStirFry_9.jpg?w=1200&h=1200&q=60&fm=jpg&fit=crop&dm=1703377301&s=3484d660c4b404c6d23b0c3ec7ac66eb",
+    details: {
+      ingredients: "Broccoli, bell peppers, carrots, soy sauce, sesame oil",
+      preparation: "Stir-fried with a blend of soy sauce and sesame oil, this dish is vibrant and packed with flavor.",
+      allergens: "Soy",
+      dietary: "Vegan, gluten-free",
+      pairings: "Great with our house-made ginger tea"
+    }
+  },
+  {
+    name: "Chicken Parmesan",
+    description: "Breaded chicken breast topped with marinara and cheese",
+    price: "$30",
+    image: "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2023-09-chicken-parmesan%2Fchicken-parmesan-1287",
+    details: {
+      ingredients: "Chicken breast, marinara sauce, mozzarella cheese, basil",
+      preparation: "Crispy breaded chicken topped with marinara sauce and melted mozzarella, served with a side of pasta.",
+      allergens: "Dairy, gluten",
+      dietary: "Contains gluten",
+      pairings: "Pairs beautifully with our Chianti"
+    }
+  },
+  {
+    name: "Chocolate Lava Cake",
+    description: "Rich chocolate cake with a molten center",
+    price: "$10",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqaM0cCVxQQXHXT_QGA2befLdt35iuZGJUCA&s",
+    details: {
+      ingredients: "Dark chocolate, butter, eggs, sugar, flour",
+      preparation: "Baked to perfection, this cake has a gooey chocolate center that flows out when cut.",
+      allergens: "Dairy, eggs, gluten",
+      dietary: "Contains gluten",
+      pairings: "Delicious with our vanilla ice cream"
+    }
+  },
 ];
 
 export default function Menu() {
-  const [selectedDish, setSelectedDish] = useState(null);
+  const [selectedDish, setSelectedDish] = useState<MenuItem | null>(null);
   const [showReservationModal, setShowReservationModal] = useState(false);
 
-  const openDishDetails = (dish) => {
+  const openDishDetails = (dish: MenuItem) => {
     setSelectedDish(dish);
   };
 
@@ -157,7 +225,10 @@ export default function Menu() {
                     <button
                       onClick={() => {
                         closeDishDetails();
-                        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                        const contactElement = document.getElementById('contact');
+                        if (contactElement) {
+                          contactElement.scrollIntoView({ behavior: 'smooth' });
+                        }
                       }}
                       className="w-full bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition"
                     >
