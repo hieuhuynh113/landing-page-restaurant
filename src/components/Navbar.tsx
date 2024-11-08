@@ -4,6 +4,15 @@ import { Menu, X, UtensilsCrossed } from 'lucide-react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'Menu', href: '#menu' },
+    { name: 'About', href: '#about' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Events', href: '#events' },
+    { name: 'Contact', href: '#contact' }
+  ];
+
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,10 +24,15 @@ export default function Navbar() {
           
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
-              <a href="#home" className="text-gray-900 hover:text-amber-600">Home</a>
-              <a href="#menu" className="text-gray-900 hover:text-amber-600">Menu</a>
-              <a href="#about" className="text-gray-900 hover:text-amber-600">About</a>
-              <a href="#contact" className="text-gray-900 hover:text-amber-600">Contact</a>
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-900 hover:text-amber-600 transition"
+                >
+                  {item.name}
+                </a>
+              ))}
               <button className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition">
                 Reserve Table
               </button>
@@ -36,10 +50,16 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-amber-600">Home</a>
-            <a href="#menu" className="block px-3 py-2 text-gray-900 hover:text-amber-600">Menu</a>
-            <a href="#about" className="block px-3 py-2 text-gray-900 hover:text-amber-600">About</a>
-            <a href="#contact" className="block px-3 py-2 text-gray-900 hover:text-amber-600">Contact</a>
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="block px-3 py-2 text-gray-900 hover:text-amber-600 transition"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
             <button className="w-full text-center bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition">
               Reserve Table
             </button>
