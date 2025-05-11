@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, Camera, Heart } from 'lucide-react';
 
 export default function Gallery() {
@@ -78,15 +78,15 @@ export default function Gallery() {
     ? images 
     : images.filter(img => img.category === filter);
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     if (selectedImage === null) return;
     setSelectedImage(selectedImage === 0 ? images.length - 1 : selectedImage - 1);
-  };
+  }, [selectedImage, images.length]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (selectedImage === null) return;
     setSelectedImage(selectedImage === images.length - 1 ? 0 : selectedImage + 1);
-  };
+  }, [selectedImage, images.length]);
 
   const toggleLike = (index: number, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -97,17 +97,17 @@ export default function Gallery() {
     localStorage.setItem('galleryLikes', JSON.stringify(newLikedImages));
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (selectedImage === null) return;
     if (e.key === 'ArrowLeft') handlePrevious();
     if (e.key === 'ArrowRight') handleNext();
     if (e.key === 'Escape') setSelectedImage(null);
-  };
+  }, [selectedImage, handlePrevious, handleNext]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage]);
+  }, [handleKeyDown]);
 
   return (
     <section id="gallery" className="py-20">
