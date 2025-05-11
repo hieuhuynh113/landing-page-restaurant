@@ -1,18 +1,18 @@
 import React from 'react';
-import { Clock, MapPin, Phone, Award, Users, UtensilsCrossed } from 'lucide-react';
+import { Clock, MapPin, Phone, Award } from 'lucide-react';
 
 export default function About() {
   const stats = [
-    { label: 'Years of Excellence', value: '25+' },
-    { label: 'Professional Chefs', value: '12' },
-    { label: 'Dishes Mastered', value: '150+' },
-    { label: 'Happy Customers', value: '50K+' }
+    { label: 'Năm kinh nghiệm', value: '25+' },
+    { label: 'Đầu bếp chuyên nghiệp', value: '12' },
+    { label: 'Món ăn đặc biệt', value: '150+' },
+    { label: 'Khách hàng hài lòng', value: '50K+' }
   ];
 
   const awards = [
-    { year: '2023', title: 'Michelin Star' },
-    { year: '2022', title: 'Best Fine Dining' },
-    { year: '2021', title: 'Wine Excellence' }
+    { year: '2023', title: 'Sao Michelin' },
+    { year: '2022', title: 'Nhà hàng sang trọng tốt nhất' },
+    { year: '2021', title: 'Xuất sắc về rượu vang' }
   ];
 
   return (
@@ -22,38 +22,38 @@ export default function About() {
           <div>
             <div className="inline-flex items-center bg-amber-100 px-4 py-2 rounded-full text-amber-600 mb-6">
               <Award className="h-5 w-5 mr-2" />
-              <span className="font-medium">Award Winning Restaurant</span>
+              <span className="font-medium">Nhà hàng đoạt nhiều giải thưởng</span>
             </div>
 
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Câu chuyện của chúng tôi</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Founded in 1995, Saveur has been serving exceptional cuisine for over two decades. 
-              Our commitment to quality ingredients, innovative recipes, and impeccable service 
-              has made us a landmark destination for fine dining enthusiasts.
+              Được thành lập vào năm 1995, Saveur đã phục vụ ẩm thực tinh tế trong hơn hai thập kỷ. 
+              Cam kết của chúng tôi về nguyên liệu chất lượng, công thức sáng tạo và dịch vụ hoàn hảo 
+              đã làm nên điểm đến nổi bật cho những người yêu thích ẩm thực tinh tế.
             </p>
             
             <div className="space-y-6 mb-8">
               <div className="flex items-center">
                 <Clock className="h-6 w-6 text-amber-600 mr-4" />
                 <div>
-                  <h3 className="font-semibold">Opening Hours</h3>
-                  <p className="text-gray-600">Mon-Sun: 11:00 AM - 11:00 PM</p>
+                  <h3 className="font-semibold">Giờ mở cửa</h3>
+                  <p className="text-gray-600">Thứ 2 - Chủ nhật: 11:00 - 23:00</p>
                 </div>
               </div>
               
               <div className="flex items-center">
                 <MapPin className="h-6 w-6 text-amber-600 mr-4" />
                 <div>
-                  <h3 className="font-semibold">Location</h3>
-                  <p className="text-gray-600">123 Gourmet Street, Culinary District</p>
+                  <h3 className="font-semibold">Địa điểm</h3>
+                  <p className="text-gray-600">123 Đường Ẩm Thực, Quận Ẩm Thực</p>
                 </div>
               </div>
               
               <div className="flex items-center">
                 <Phone className="h-6 w-6 text-amber-600 mr-4" />
                 <div>
-                  <h3 className="font-semibold">Reservations</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <h3 className="font-semibold">Đặt bàn</h3>
+                  <p className="text-gray-600">+84 (555) 123-4567</p>
                 </div>
               </div>
             </div>
@@ -71,12 +71,12 @@ export default function About() {
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop"
-              alt="Restaurant interior"
+              alt="Nội thất nhà hàng"
               className="rounded-lg shadow-xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-amber-600 text-white p-6 rounded-lg">
               <p className="text-3xl font-bold">25+</p>
-              <p>Years of Excellence</p>
+              <p>Năm kinh nghiệm</p>
             </div>
           </div>
         </div>
@@ -92,10 +92,10 @@ export default function About() {
 
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Meet Our Team</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Đội ngũ của chúng tôi</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our talented team of culinary experts brings together years of experience
-              from renowned restaurants around the world.
+              Đội ngũ tài năng của chúng tôi mang đến nhiều năm kinh nghiệm
+              từ các nhà hàng nổi tiếng trên khắp thế giới.
             </p>
           </div>
 
@@ -103,37 +103,37 @@ export default function About() {
             <div className="text-center">
               <img
                 src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=1000&auto=format&fit=crop"
-                alt="Head Chef"
+                alt="Bếp trưởng"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
               <h4 className="font-semibold mb-1">Michael Chen</h4>
-              <p className="text-amber-600 text-sm mb-2">Head Chef</p>
+              <p className="text-amber-600 text-sm mb-2">Bếp trưởng</p>
               <p className="text-gray-600 text-sm">
-                15 years of experience in fine dining cuisine
+                15 năm kinh nghiệm trong ẩm thực cao cấp
               </p>
             </div>
             <div className="text-center">
               <img
                 src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1000&auto=format&fit=crop"
-                alt="Pastry Chef"
+                alt="Bếp bánh"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
               <h4 className="font-semibold mb-1">Sophie Laurent</h4>
-              <p className="text-amber-600 text-sm mb-2">Pastry Chef</p>
+              <p className="text-amber-600 text-sm mb-2">Bếp bánh</p>
               <p className="text-gray-600 text-sm">
-                Award-winning pastry artist
+                Nghệ nhân làm bánh đoạt nhiều giải thưởng
               </p>
             </div>
             <div className="text-center">
               <img
                 src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1000&auto=format&fit=crop"
-                alt="Sommelier"
+                alt="Chuyên gia rượu vang"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
               <h4 className="font-semibold mb-1">James Wilson</h4>
-              <p className="text-amber-600 text-sm mb-2">Sommelier</p>
+              <p className="text-amber-600 text-sm mb-2">Chuyên gia rượu vang</p>
               <p className="text-gray-600 text-sm">
-                Certified wine expert with global experience
+                Chuyên gia rượu vang được chứng nhận với kinh nghiệm toàn cầu
               </p>
             </div>
           </div>

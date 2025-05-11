@@ -5,12 +5,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'About', href: '#about' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Events', href: '#events' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Trang chủ', href: '#home' },
+    { name: 'Thực đơn', href: '#menu' },
+    { name: 'Giới thiệu', href: '#about' },
+    { name: 'Thư viện', href: '#gallery' },
+    { name: 'Sự kiện', href: '#events' },
+    { name: 'Liên hệ', href: '#contact' }
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function Navbar() {
                 </a>
               ))}
               <button className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition">
-                Reserve Table
+                Đặt bàn
               </button>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function Navbar() {
               </a>
             ))}
             <button className="w-full text-center bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition">
-              Reserve Table
+              Đặt bàn
             </button>
           </div>
         </div>

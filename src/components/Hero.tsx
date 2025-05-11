@@ -9,7 +9,7 @@ export default function Hero() {
           <img
             src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2074&auto=format&fit=crop"
             className="w-full h-full object-cover"
-            alt="Restaurant interior"
+            alt="Nội thất nhà hàng"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         </div>
@@ -18,41 +18,41 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="flex items-center space-x-4 mb-8">
           <Star className="text-yellow-400 h-6 w-6" />
-          <span className="text-yellow-400 font-medium">Michelin Star Restaurant</span>
+          <span className="text-yellow-400 font-medium">Nhà hàng đạt sao Michelin</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-white max-w-4xl">
-          Experience Fine Dining<br />at Its Finest
+          Trải nghiệm ẩm thực<br />đẳng cấp nhất
         </h1>
         <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-2xl">
-          Indulge in an extraordinary culinary journey where every dish tells a story
-          of passion, creativity, and excellence.
+          Đắm mình trong hành trình ẩm thực phi thường nơi mỗi món ăn kể một câu chuyện
+          về đam mê, sáng tạo và sự xuất sắc.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <button className="bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition flex items-center justify-center group">
-            View Menu <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            Xem thực đơn <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white/10 transition">
-            Make Reservation
+            Đặt bàn ngay
           </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
             <Award className="h-8 w-8 text-amber-600 mb-4" />
-            <h3 className="text-white text-lg font-semibold mb-2">Award Winning</h3>
-            <p className="text-gray-300">Recognized for culinary excellence and innovative cuisine</p>
+            <h3 className="text-white text-lg font-semibold mb-2">Đạt nhiều giải thưởng</h3>
+            <p className="text-gray-300">Được công nhận về sự xuất sắc và sáng tạo trong ẩm thực</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
             <Clock className="h-8 w-8 text-amber-600 mb-4" />
-            <h3 className="text-white text-lg font-semibold mb-2">Fresh Ingredients</h3>
-            <p className="text-gray-300">Daily sourced local and seasonal ingredients</p>
+            <h3 className="text-white text-lg font-semibold mb-2">Nguyên liệu tươi ngon</h3>
+            <p className="text-gray-300">Nguồn nguyên liệu địa phương và theo mùa mỗi ngày</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
             <Star className="h-8 w-8 text-amber-600 mb-4" />
-            <h3 className="text-white text-lg font-semibold mb-2">Expert Chefs</h3>
-            <p className="text-gray-300">Internationally trained culinary masters</p>
+            <h3 className="text-white text-lg font-semibold mb-2">Đầu bếp chuyên nghiệp</h3>
+            <p className="text-gray-300">Các bậc thầy ẩm thực được đào tạo quốc tế</p>
           </div>
         </div>
       </div>
