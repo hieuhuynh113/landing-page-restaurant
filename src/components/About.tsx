@@ -1,4 +1,3 @@
-import React from 'react';
 import { Clock, MapPin, Phone, Award } from 'lucide-react';
 
 export default function About() {

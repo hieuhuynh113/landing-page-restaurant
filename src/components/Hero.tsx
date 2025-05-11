@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, Star, Award, Clock } from 'lucide-react';
 
 export default function Hero() {

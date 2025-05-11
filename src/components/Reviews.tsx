@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Star, Quote, ThumbsUp, MessageCircle } from 'lucide-react';
 
 export default function Reviews() {
