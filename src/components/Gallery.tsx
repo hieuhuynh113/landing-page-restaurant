@@ -9,51 +9,51 @@ export default function Gallery() {
   const images = [
     {
       url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop",
-      title: "Khu vực ăn uống chính",
+      title: "Main Dining Area",
       category: "interior",
-      description: "Không gian ăn uống sang trọng với thiết kế hiện đại và ánh sáng ấm cúng"
+      description: "Elegant dining space with modern design and warm lighting"
     },
     {
       url: "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2070&auto=format&fit=crop",
-      title: "Bò bít tết đặc trưng",
+      title: "Signature Steak",
       category: "food",
-      description: "Thịt bò hảo hạng được chế biến hoàn hảo với rau theo mùa"
+      description: "Premium beef perfectly prepared with seasonal vegetables"
     },
     {
       url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
-      title: "Phòng ăn riêng",
+      title: "Private Dining Room",
       category: "interior",
-      description: "Không gian thân mật hoàn hảo cho các dịp đặc biệt và sự kiện riêng tư"
+      description: "Intimate space perfect for special occasions and private events"
     },
     {
       url: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2074&auto=format&fit=crop",
-      title: "Bộ sưu tập rượu vang",
+      title: "Wine Collection",
       category: "drinks",
-      description: "Bộ sưu tập rượu vang tuyển chọn từ khắp nơi trên thế giới"
+      description: "Curated wine collection from around the world"
     },
     {
       url: "https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=2070&auto=format&fit=crop",
-      title: "Món đặc biệt của Bếp trưởng",
+      title: "Chef's Special",
       category: "food",
-      description: "Món đặc biệt hàng ngày được tạo ra bởi đội ngũ đầu bếp chuyên nghiệp"
+      description: "Daily specials created by our professional chef team"
     },
     {
       url: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=2070&auto=format&fit=crop",
-      title: "Sân hiên ngoài trời",
+      title: "Outdoor Terrace",
       category: "interior",
-      description: "Ăn uống ngoài trời với tầm nhìn tuyệt đẹp ra thành phố"
+      description: "Al fresco dining with stunning city views"
     },
     {
       url: "https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=2070&auto=format&fit=crop",
-      title: "Các loại cocktail",
+      title: "Cocktail Selection",
       category: "drinks",
-      description: "Cocktail thủ công được pha chế với rượu cao cấp"
+      description: "Handcrafted cocktails made with premium spirits"
     },
     {
       url: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop",
-      title: "Đĩa tráng miệng",
+      title: "Dessert Platter",
       category: "food",
-      description: "Các món tráng miệng nghệ thuật được chuẩn bị bởi đầu bếp bánh của chúng tôi"
+      description: "Artistic desserts prepared by our pastry chef"
     }
   ];
 
@@ -68,10 +68,10 @@ export default function Gallery() {
   const [filter, setFilter] = useState('all');
   const categories = ['all', 'interior', 'food', 'drinks'];
   const categoriesVN = {
-    'all': 'tất cả',
-    'interior': 'không gian',
-    'food': 'món ăn',
-    'drinks': 'đồ uống'
+    'all': 'all',
+    'interior': 'interior',
+    'food': 'food',
+    'drinks': 'drinks'
   };
 
   const filteredImages = filter === 'all' 
@@ -113,10 +113,10 @@ export default function Gallery() {
     <section id="gallery" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-amber-600 font-medium">Thư viện ảnh</span>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Khoảnh khắc ẩm thực</h2>
+          <span className="text-amber-600 font-medium">Photo Gallery</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Culinary Moments</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Hãy tham quan nhà hàng qua các hình ảnh về không gian, món ăn và những khoảnh khắc đáng nhớ
+            Explore our restaurant through images of our space, dishes, and memorable moments
           </p>
         </div>
 

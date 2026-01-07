@@ -8,8 +8,8 @@ export default function Reviews() {
   const reviews = [
     {
       author: "Emily Thompson",
-      role: "Nhà phê bình ẩm thực",
-      content: "Một trải nghiệm ẩm thực phi thường. Sự chú ý đến từng chi tiết trong mỗi món ăn thật đáng kinh ngạc. Đề xuất kết hợp rượu vang hoàn hảo và dịch vụ thì không thể chê vào đâu được.",
+      role: "Food Critic",
+      content: "An extraordinary culinary experience. The attention to detail in each dish is remarkable. Perfect wine pairing suggestions and impeccable service.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop",
       date: "2024-03-01",
@@ -19,8 +19,8 @@ export default function Reviews() {
     },
     {
       author: "Michael Chen",
-      role: "Người yêu rượu vang",
-      content: "Bộ sưu tập rượu vang thật xuất sắc, và những đề xuất của chuyên gia rượu vang rất hoàn hảo. Mỗi khóa học được kết hợp một cách chu đáo với những loại rượu vang đặc biệt.",
+      role: "Wine Enthusiast",
+      content: "The wine collection is outstanding, and the sommelier's recommendations are perfect. Each course was thoughtfully paired with exceptional wines.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop",
       date: "2024-02-28",
@@ -30,8 +30,8 @@ export default function Reviews() {
     },
     {
       author: "Sarah Johnson",
-      role: "Khách hàng thường xuyên",
-      content: "Mỗi lần đến đều cảm thấy đặc biệt. Dịch vụ hoàn hảo và không khí luôn tuyệt vời. Thực đơn theo mùa không bao giờ làm thất vọng.",
+      role: "Regular Customer",
+      content: "Every visit feels special. The service is impeccable and the atmosphere is always wonderful. The seasonal menu never disappoints.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop",
       date: "2024-02-25",
@@ -41,8 +41,8 @@ export default function Reviews() {
     },
     {
       author: "David Wilson",
-      role: "Blogger ẩm thực",
-      content: "Một hành trình ẩm thực vượt quá mong đợi. Thực đơn nếm thử là sự thể hiện hoàn hảo của nguyên liệu theo mùa và kỹ thuật sáng tạo.",
+      role: "Food Blogger",
+      content: "A culinary journey that exceeded expectations. The tasting menu is a perfect showcase of seasonal ingredients and creative techniques.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop",
       date: "2024-02-20",
@@ -52,8 +52,8 @@ export default function Reviews() {
     },
     {
       author: "Lisa Martinez",
-      role: "Khách lần đầu",
-      content: "Hoàn toàn bị choáng ngợp bởi trải nghiệm. Ngay từ khi chúng tôi bước vào, dịch vụ đã rất đặc biệt. Món ăn đơn giản là xuất sắc.",
+      role: "First-time Guest",
+      content: "Completely blown away by the experience. From the moment we walked in, the service was exceptional. The food was simply outstanding.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop",
       date: "2024-02-15",
@@ -64,9 +64,9 @@ export default function Reviews() {
   ];
 
   const stats = [
-    { label: 'Đánh giá tổng thể', value: '4.9' },
-    { label: 'Lượt đánh giá', value: '500+' },
-    { label: 'Khuyến nghị', value: '98%' }
+    { label: 'Overall Rating', value: '4.9' },
+    { label: 'Total Reviews', value: '500+' },
+    { label: 'Recommendation Rate', value: '98%' }
   ];
 
   const filteredReviews = showAllReviews ? reviews : reviews.slice(0, 3);
@@ -75,10 +75,10 @@ export default function Reviews() {
     <section className="py-20 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-amber-600 font-medium">Lời chứng thực</span>
-          <h2 className="text-4xl font-bold mb-4">Khách hàng nói gì về chúng tôi</h2>
+          <span className="text-amber-600 font-medium">Testimonials</span>
+          <h2 className="text-4xl font-bold mb-4">What Our Customers Say</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Đọc về trải nghiệm từ những vị khách quý giá của chúng tôi
+            Read about experiences from our valued guests
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function Reviews() {
                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
             } transition`}
           >
-            Đánh giá gần đây
+            Recent Reviews
           </button>
           <button
             onClick={() => setActiveTab('top')}
@@ -110,7 +110,7 @@ export default function Reviews() {
                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
             } transition`}
           >
-            Đánh giá cao nhất
+            Top Rated
           </button>
         </div>
 
@@ -133,7 +133,7 @@ export default function Reviews() {
                     <h4 className="font-semibold">{review.author}</h4>
                     {review.verified && (
                       <span className="ml-2 bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">
-                        Đã xác minh
+                        Verified
                       </span>
                     )}
                   </div>
@@ -171,7 +171,7 @@ export default function Reviews() {
             onClick={() => setShowAllReviews(!showAllReviews)}
             className="inline-flex items-center text-amber-600 hover:text-amber-500 transition"
           >
-            {showAllReviews ? 'Hiển thị ít hơn' : 'Xem thêm đánh giá'}
+            {showAllReviews ? 'Show Less' : 'View More Reviews'}
             <svg
               className={`ml-2 h-5 w-5 transform transition-transform ${
                 showAllReviews ? 'rotate-180' : ''
@@ -192,15 +192,15 @@ export default function Reviews() {
 
         <div className="mt-16 bg-gray-800 rounded-lg p-8">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">Chia sẻ trải nghiệm của bạn</h3>
+            <h3 className="text-2xl font-bold mb-4">Share Your Experience</h3>
             <p className="text-gray-400">
-              Chúng tôi đánh giá cao phản hồi của bạn. Hãy cho chúng tôi biết về trải nghiệm ẩm thực của bạn tại Saveur.
+              We value your feedback. Let us know about your culinary experience at Saveur.
             </p>
           </div>
           
           <form className="max-w-2xl mx-auto">
             <div className="mb-6">
-              <label className="block text-sm font-medium mb-2">Đánh giá</label>
+              <label className="block text-sm font-medium mb-2">Rating</label>
               <div className="flex gap-2">
                 {[1, 2, 3, 4, 5].map((rating) => (
                   <button
@@ -215,11 +215,11 @@ export default function Reviews() {
             </div>
             
             <div className="mb-6">
-              <label className="block text-sm font-medium mb-2">Đánh giá của bạn</label>
+              <label className="block text-sm font-medium mb-2">Your Review</label>
               <textarea
                 rows={4}
                 className="w-full px-4 py-3 bg-gray-700 rounded-lg border border-gray-600 focus:ring-2 focus:ring-amber-600 focus:border-transparent"
-                placeholder="Chia sẻ trải nghiệm ẩm thực của bạn..."
+                placeholder="Share your culinary experience..."
               ></textarea>
             </div>
 
@@ -228,7 +228,7 @@ export default function Reviews() {
                 type="submit"
                 className="bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition"
               >
-                Gửi đánh giá
+                Submit Review
               </button>
             </div>
           </form>

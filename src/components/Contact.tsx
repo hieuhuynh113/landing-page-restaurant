@@ -32,15 +32,15 @@ export default function Contact() {
   const [errors, setErrors] = useState<FormErrors>({});
 
   const occasions = [
-    'Sinh nhật', 'Kỷ niệm', 'Tiệc công ty', 'Hẹn hò', 'Họp gia đình', 'Khác'
+    'Birthday', 'Anniversary', 'Corporate Event', 'Date Night', 'Family Gathering', 'Other'
   ];
 
   const validateForm = () => {
     const newErrors: FormErrors = {};
-    if (!formData.name) newErrors.name = 'Tên là bắt buộc';
-    if (!formData.email) newErrors.email = 'Email là bắt buộc';
-    if (!formData.date) newErrors.date = 'Ngày là bắt buộc';
-    if (!formData.time) newErrors.time = 'Giờ là bắt buộc';
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.email) newErrors.email = 'Email is required';
+    if (!formData.date) newErrors.date = 'Date is required';
+    if (!formData.time) newErrors.time = 'Time is required';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -79,10 +79,10 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-amber-600 font-medium">Đặt bàn</span>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Đặt bàn trước</h2>
+          <span className="text-amber-600 font-medium">Reservations</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Book a Table</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Đặt bàn trực tuyến và trải nghiệm ẩm thực cùng dịch vụ đẳng cấp của chúng tôi
+            Book online and experience our fine cuisine and exceptional service
           </p>
         </div>
         
@@ -92,7 +92,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Họ tên {errors.name && <span className="text-red-500 text-xs">({errors.name})</span>}
+                    Full Name {errors.name && <span className="text-red-500 text-xs">({errors.name})</span>}
                   </label>
                   <input
                     type="text"
@@ -100,7 +100,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-amber-600 focus:border-transparent`}
-                    placeholder="Tên của bạn"
+                    placeholder="Your name"
                   />
                 </div>
                 <div>
@@ -113,7 +113,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-amber-600 focus:border-transparent`}
-                    placeholder="Email của bạn"
+                    placeholder="Your email"
                   />
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Điện thoại (Không bắt buộc)
+                    Phone (Optional)
                   </label>
                   <input
                     type="tel"
@@ -129,12 +129,12 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-600 focus:border-transparent"
-                    placeholder="Số điện thoại của bạn"
+                    placeholder="Your phone number"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Dịp đặc biệt
+                    Special Occasion
                   </label>
                   <select
                     name="occasion"
@@ -142,7 +142,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-600 focus:border-transparent"
                   >
-                    <option value="">Chọn dịp</option>
+                    <option value="">Select occasion</option>
                     {occasions.map(occasion => (
                       <option key={occasion} value={occasion}>{occasion}</option>
                     ))}
@@ -153,7 +153,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Ngày {errors.date && <span className="text-red-500 text-xs">({errors.date})</span>}
+                    Date {errors.date && <span className="text-red-500 text-xs">({errors.date})</span>}
                   </label>
                   <input
                     type="date"
@@ -165,7 +165,7 @@ export default function Contact() {
                 </div>
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Giờ {errors.time && <span className="text-red-500 text-xs">({errors.time})</span>}
+                    Time {errors.time && <span className="text-red-500 text-xs">({errors.time})</span>}
                   </label>
                   <input
                     type="time"
@@ -177,7 +177,7 @@ export default function Contact() {
                 </div>
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Số người
+                    Number of Guests
                   </label>
                   <select
                     name="guests"
@@ -187,17 +187,17 @@ export default function Contact() {
                   >
                     {[1,2,3,4,5,6,7,8].map(num => (
                       <option key={num} value={`${num} ${num === 1 ? 'Person' : 'People'}`}>
-                        {num} {num === 1 ? 'Người' : 'Người'}
+                        {num} {num === 1 ? 'Person' : 'People'}
                       </option>
                     ))}
-                    <option value="9+ People">9+ Người</option>
+                    <option value="9+ People">9+ People</option>
                   </select>
                 </div>
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Yêu cầu đặc biệt
+                  Special Requests
                 </label>
                 <textarea
                   name="requests"
@@ -205,13 +205,13 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-600 focus:border-transparent"
-                  placeholder="Chế độ ăn kiêng hoặc yêu cầu đặc biệt?"
+                  placeholder="Dietary restrictions or special requests?"
                 ></textarea>
               </div>
               
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <AlertCircle className="h-4 w-4" />
-                <p>Chúng tôi sẽ gửi xác nhận qua email sau khi đặt bàn được xác nhận.</p>
+                <p>We will send a confirmation email once your reservation is confirmed.</p>
               </div>
 
               <div className="text-center">
@@ -219,21 +219,21 @@ export default function Contact() {
                   type="submit"
                   className="bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition"
                 >
-                  Đặt bàn ngay
+                  Book Now
                 </button>
               </div>
             </form>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-lg h-fit">
-            <h3 className="text-xl font-semibold mb-6">Thông tin liên hệ</h3>
+            <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-amber-100 p-3 rounded-full">
                   <Phone className="h-6 w-6 text-amber-600" />
                 </div>
                 <div>
-                  <p className="font-medium">Điện thoại</p>
+                  <p className="font-medium">Phone</p>
                   <p className="text-gray-600">+84 (555) 123-4567</p>
                 </div>
               </div>
@@ -243,7 +243,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-gray-600">datban@saveur.com</p>
+                  <p className="text-gray-600">reservations@saveur.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -251,35 +251,35 @@ export default function Contact() {
                   <MapPin className="h-6 w-6 text-amber-600" />
                 </div>
                 <div>
-                  <p className="font-medium">Địa điểm</p>
-                  <p className="text-gray-600">123 Đường Ẩm Thực<br />Quận Ẩm Thực</p>
+                  <p className="font-medium">Location</p>
+                  <p className="text-gray-600">123 Culinary Street<br />Food District</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 p-4 bg-amber-50 rounded-lg">
-              <h4 className="font-medium mb-2">Sự kiện riêng tư</h4>
+              <h4 className="font-medium mb-2">Private Events</h4>
               <p className="text-sm text-gray-600 mb-4">
-                Bạn đang lên kế hoạch tổ chức một buổi lễ đặc biệt? Chúng tôi cung cấp phòng ăn riêng và thực đơn tùy chỉnh cho sự kiện của bạn.
+                Planning a special celebration? We offer private dining rooms and customized menus for your event.
               </p>
               <a href="#" className="text-amber-600 text-sm font-medium hover:text-amber-700">
-                Tìm hiểu thêm
+                Learn More
               </a>
             </div>
 
             <div className="mt-8">
-              <h4 className="font-medium mb-4">Giờ mở cửa</h4>
+              <h4 className="font-medium mb-4">Opening Hours</h4>
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
-                  <span>Thứ 2 - Thứ 5:</span>
+                  <span>Monday - Thursday:</span>
                   <span>11:00 - 22:00</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span>Thứ 6 - Thứ 7:</span>
+                  <span>Friday - Saturday:</span>
                   <span>11:00 - 23:00</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span>Chủ nhật:</span>
+                  <span>Sunday:</span>
                   <span>10:00 - 21:00</span>
                 </div>
               </div>
@@ -292,15 +292,15 @@ export default function Contact() {
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="bg-white p-8 rounded-lg max-w-md w-full text-center">
               <UtensilsCrossed className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Cảm ơn bạn!</h3>
+              <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
               <p className="mb-6 text-gray-600">
-                Yêu cầu đặt bàn của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ với bạn sớm để xác nhận.
+                Your reservation request has been submitted successfully. We will contact you soon to confirm.
               </p>
               <button
                 onClick={() => setShowConfirmation(false)}
                 className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition"
               >
-                Đóng
+                Close
               </button>
             </div>
           </div>

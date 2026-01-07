@@ -1,4 +1,4 @@
-# Saveur - Trang Đích Nhà Hàng
+# Saveur - Restaurant Landing Page
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react" alt="React 18.3.1" />
@@ -7,118 +7,120 @@
   <img src="https://img.shields.io/badge/Vite-5.4.2-646CFF?logo=vite" alt="Vite 5.4.2" />
 </div>
 
-## 📋 Tổng Quan
+## 📋 Overview
 
-Saveur là một trang đích tinh tế, đáp ứng hoàn hảo trên mọi thiết bị dành cho nhà hàng cao cấp. Được xây dựng với các công nghệ web hiện đại bao gồm React, TypeScript và Tailwind CSS, trang web mang đến trải nghiệm mượt mà, sang trọng trên mọi thiết bị. Trang web giới thiệu không gian, thực đơn, sự kiện đặc biệt và hệ thống đặt bàn của nhà hàng.
+Saveur is a refined, fully responsive landing page for a fine‑dining restaurant. Built with modern web technologies including React, TypeScript, and Tailwind CSS, it delivers a smooth, luxurious experience across all devices. The site showcases the restaurant’s ambiance, menu, special events, and reservation system.
 
-![Phần Giới Thiệu](https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1500&auto=format&fit=crop)
+![Hero Section](https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1500&auto=format&fit=crop)
 
-## ✨ Tính Năng
+## ✨ Features
 
-- **Thiết Kế Đáp Ứng** - Trải nghiệm mượt mà trên mọi kích thước màn hình từ điện thoại di động đến máy tính
-- **Hệ Thống Thực Đơn Tương Tác** - Thực đơn có thể lọc và tìm kiếm với thông tin chi tiết về mỗi món ăn
-- **Đặt Bàn Trực Tuyến** - Xác thực biểu mẫu và xác nhận đặt bàn
-- **Thư Viện Hình Ảnh** - Trưng bày không gian và món ăn của nhà hàng
-- **Sự Kiện Nổi Bật** - Sự kiện đặc biệt và các chương trình khuyến mãi
-- **Đánh Giá Khách Hàng** - Lời chứng thực từ khách hàng hài lòng
-- **Thông Tin Liên Hệ** - Dễ dàng truy cập vị trí, giờ mở cửa và thông tin liên hệ
+- **Responsive Design** – Seamless experience on all screen sizes from mobile to desktop  
+- **Interactive Menu System** – Filterable and searchable menu with detailed information for each dish  
+- **Online Reservations** – Validated booking form with confirmation modal  
+- **Image Gallery** – Showcases the restaurant’s space and dishes  
+- **Featured Events** – Special events and promotional experiences  
+- **Customer Reviews** – Testimonials from satisfied guests  
+- **Contact Information** – Easy access to location, opening hours, and contact details  
 
-## 🚀 Bắt Đầu Nhanh
+## 🚀 Getting Started
 
-### Yêu Cầu Hệ Thống
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v16 trở lên)
-- npm hoặc yarn
+- [Node.js](https://nodejs.org/) (v16 or higher)  
+- npm or yarn  
 
-### Cài Đặt
+### Installation
 
-1. Sao chép kho lưu trữ:
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/landing-page-restaurant.git
    cd landing-page-restaurant
    ```
 
-2. Cài đặt các gói phụ thuộc:
+2. Install dependencies:
+
    ```bash
    npm install
-   # hoặc
+   # or
    yarn install
    ```
 
-3. Khởi động máy chủ phát triển:
+3. Start the development server:
+
    ```bash
    npm run dev
-   # hoặc
+   # or
    yarn dev
    ```
 
-4. Mở trình duyệt của bạn:
-   ```
+4. Open your browser:
+
+   ```bash
    http://localhost:5173
    ```
 
-## 🛠️ Công Nghệ
+## 🛠️ Tech Stack
 
-- **React** - Thư viện giao diện người dùng
-- **TypeScript** - JavaScript an toàn với kiểu dữ liệu
-- **Tailwind CSS** - Framework CSS theo phương pháp utility-first
-- **Vite** - Công cụ phát triển frontend thế hệ mới
-- **Lucide React** - Bộ biểu tượng đẹp, nhất quán
+- **React** – UI library  
+- **TypeScript** – Type‑safe JavaScript  
+- **Tailwind CSS** – Utility‑first CSS framework  
+- **Vite** – Next‑generation frontend tooling  
+- **Lucide React** – Beautiful, consistent icon set  
 
-## 📱 Các Phần
+## 📱 Sections
 
-1. **Thanh Điều Hướng** - Điều hướng đơn giản và trực quan với menu đáp ứng trên di động
-2. **Phần Giới Thiệu** - Hình ảnh ấn tượng với lời kêu gọi hành động
-3. **Thực Đơn** - Các món ăn được phân loại với mô tả chi tiết và hình ảnh
-4. **Giới Thiệu** - Câu chuyện và triết lý của nhà hàng
-5. **Thư Viện** - Trình bày trực quan nhà hàng và các món ăn
-6. **Sự Kiện** - Dịp đặc biệt và sự kiện khuyến mãi
-7. **Đánh Giá** - Lời chứng thực của khách hàng
-8. **Liên Hệ** - Biểu mẫu đặt bàn và thông tin liên lạc
-9. **Chân Trang** - Liên kết mạng xã hội, giờ mở cửa và thông tin bổ sung
+1. **Navbar** – Simple and intuitive navigation with a mobile‑responsive menu  
+2. **Hero** – Striking hero section with a call to action  
+3. **Menu** – Categorized dishes with detailed descriptions and images  
+4. **About** – Restaurant story and philosophy  
+5. **Gallery** – Visual presentation of the restaurant and dishes  
+6. **Events** – Special occasions and promotional events  
+7. **Reviews** – Customer testimonials  
+8. **Contact** – Reservation form and contact information  
+9. **Footer** – Social links, opening hours, and additional info  
 
-## 🔧 Tùy Chỉnh
+## 🔧 Customization
 
-Trang web được thiết kế để dễ dàng tùy chỉnh:
+The site is designed to be easy to customize:
 
-- **Thực Đơn**: Chỉnh sửa mảng `menuItems` trong `Menu.tsx` để cập nhật món ăn
-- **Sự Kiện**: Sửa đổi các sự kiện trong `Events.tsx`
-- **Hình Ảnh**: Thay thế URL hình ảnh bằng ảnh của bạn
-- **Nội Dung**: Cập nhật văn bản trong các component để phù hợp với phong cách nhà hàng của bạn
+- **Menu**: Edit the `menuItems` array in `Menu.tsx` to update dishes  
+- **Events**: Modify events in `Events.tsx`  
+- **Images**: Replace image URLs with your own assets  
+- **Content**: Update text in components to match your restaurant’s branding  
 
-## 📦 Xây Dựng cho Sản Phẩm
+## 📦 Production Build
 
 ```bash
 npm run build
-# hoặc
+# or
 yarn build
 ```
 
-Các tệp đã xây dựng sẽ nằm trong thư mục `dist`, sẵn sàng để triển khai lên dịch vụ lưu trữ của bạn.
+The built files will be output to the `dist` directory, ready to be deployed to your hosting service.
 
-## 🌐 Triển Khai
+## 🌐 Deployment
 
-Triển khai nội dung của thư mục `dist` lên bất kỳ dịch vụ lưu trữ trang tĩnh nào:
+Deploy the contents of the `dist` directory to any static hosting provider:
 
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-- [GitHub Pages](https://pages.github.com/)
-- Bất kỳ dịch vụ lưu trữ web truyền thống nào
+- [Netlify](https://www.netlify.com/)  
+- [Vercel](https://vercel.com/)  
+- [GitHub Pages](https://pages.github.com/)  
+- Any traditional web hosting service  
 
-## 🤝 Đóng Góp
+## 🤝 Contributing
 
-Chào mừng mọi đóng góp! Vui lòng gửi Pull Request.
+Contributions are welcome! Please open a Pull Request.
 
-## 📄 Giấy Phép
+## 📄 License
 
-Dự án này được cấp phép theo Giấy phép MIT - xem tệp LICENSE để biết chi tiết.
-
-## 🔗 Demo Trực Tuyến
-
-[Xem demo trực tuyến](https://stackblitz.com/~/github.com/hieuhuynh113/landing-page-restaurant)
+This project is licensed under the MIT License – see the LICENSE file for details.
 
 ---
 
 <div align="center">
-  <p>Được tạo với ❤️ dành cho nghệ thuật ẩm thực</p>
+  <p>Crafted with ❤️ for the art of gastronomy</p>
 </div>
+
+

@@ -58,12 +58,12 @@ const EventModal: React.FC<EventModalProps> = ({ event, onClose }) => (
         </div>
 
         <div className="mb-6">
-          <h4 className="font-semibold mb-2">Về sự kiện này</h4>
+          <h4 className="font-semibold mb-2">About This Event</h4>
           <p className="text-gray-600">{event.fullDescription || event.description}</p>
         </div>
 
         <div className="mb-6">
-          <h4 className="font-semibold mb-2">Bao gồm</h4>
+          <h4 className="font-semibold mb-2">Includes</h4>
           <ul className="space-y-2">
             {event.includes.map((item: string, index: number) => (
               <li key={index} className="flex items-center text-gray-600">
@@ -77,28 +77,28 @@ const EventModal: React.FC<EventModalProps> = ({ event, onClose }) => (
         <form className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Số lượng khách
+              Number of Guests
             </label>
             <select className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-600 focus:border-transparent">
               {[1,2,3,4,5,6].map(num => (
-                <option key={num} value={num}>{num} {num === 1 ? 'Khách' : 'Khách'}</option>
+                <option key={num} value={num}>{num} {num === 1 ? 'Guest' : 'Guests'}</option>
               ))}
             </select>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Yêu cầu đặc biệt
+              Special Requests
             </label>
             <textarea
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-600 focus:border-transparent"
               rows={3}
-              placeholder="Yêu cầu về chế độ ăn kiêng hoặc yêu cầu đặc biệt khác?"
+              placeholder="Dietary restrictions or other special requests?"
             ></textarea>
           </div>
 
           <button className="w-full bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition flex items-center justify-center">
-            Đặt chỗ ngay với giá {event.price}
+            Book Now for {event.price}
           </button>
         </form>
       </div>
@@ -112,63 +112,63 @@ export default function Events() {
 
   const upcomingEvents = [
     {
-      title: "Tối thưởng thức rượu vang",
-      date: "15 Tháng 3, 2024",
+      title: "Wine Tasting Evening",
+      date: "March 15, 2024",
       time: "19:00 - 22:00",
-      description: "Tham gia cùng chuyên gia rượu vang của chúng tôi để thưởng thức các loại rượu vang cao cấp từ hầm rượu.",
-      fullDescription: "Hãy bắt đầu hành trình khám phá những vùng rượu vang tuyệt vời nhất thế giới cùng chuyên gia rượu vang của chúng tôi. Buổi tối đặc biệt này bao gồm các loại rượu vang được chọn lọc kỹ lưỡng kèm theo các món khai vị phù hợp.",
-      price: "2.000.000₫ một người",
+      description: "Join our wine sommelier to sample premium wines from our cellar.",
+      fullDescription: "Embark on a journey to discover the world's finest wine regions with our wine sommelier. This special evening includes carefully selected wines paired with complementary appetizers.",
+      price: "2,000,000₫ per person",
       image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070&auto=format&fit=crop",
       icon: GlassWater,
       category: "tasting",
       includes: [
-        "Hướng dẫn thưởng thức 6 loại rượu vang cao cấp",
-        "Kèm theo các món khai vị",
-        "Sách hướng dẫn về rượu vang",
-        "Giảm 10% khi mua rượu vang"
+        "Tasting guide for 6 premium wines",
+        "Paired appetizers",
+        "Wine guide booklet",
+        "10% discount on wine purchases"
       ]
     },
     {
-      title: "Trải nghiệm bàn của Bếp trưởng",
-      date: "22 Tháng 3, 2024",
+      title: "Chef's Table Experience",
+      date: "March 22, 2024",
       time: "18:30 - 21:30",
-      description: "Một trải nghiệm ẩm thực thân mật với bếp trưởng của chúng tôi, với thực đơn nếm thử đặc biệt.",
-      fullDescription: "Trải nghiệm nghệ thuật ẩm thực ở mức độ tinh tế nhất với bàn của Bếp trưởng. Hãy xem bếp trưởng của chúng tôi chuẩn bị thực đơn nếm thử nhiều món ngay trước mắt bạn.",
-      price: "3.500.000₫ một người",
+      description: "An intimate culinary experience with our head chef, featuring a special tasting menu.",
+      fullDescription: "Experience culinary artistry at its finest with the Chef's Table. Watch our head chef prepare a multi-course tasting menu right before your eyes.",
+      price: "3,500,000₫ per person",
       image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2070&auto=format&fit=crop",
       icon: ChefHat,
       category: "dining",
       includes: [
-        "Thực đơn nếm thử 7 món",
-        "Kết hợp với rượu vang",
-        "Trình diễn nấu ăn tương tác",
-        "Bộ sưu tập công thức nấu ăn"
+        "7-course tasting menu",
+        "Wine pairing",
+        "Interactive cooking demonstration",
+        "Recipe collection"
       ]
     },
     {
-      title: "Đêm nhạc Jazz",
-      date: "29 Tháng 3, 2024",
+      title: "Jazz Night",
+      date: "March 29, 2024",
       time: "20:00 - 23:00",
-      description: "Thưởng thức nhạc jazz trực tiếp trong khi thưởng thức thực đơn buổi tối đặc biệt của chúng tôi.",
-      fullDescription: "Đắm mình trong một buổi tối với nhạc jazz êm dịu và ẩm thực tinh tế. Ban nhạc của chúng tôi biểu diễn các bản nhạc jazz cổ điển trong khi bạn thưởng thức thực đơn được chọn lọc đặc biệt.",
-      price: "2.200.000₫ một người",
+      description: "Enjoy live jazz music while savoring our special evening menu.",
+      fullDescription: "Immerse yourself in an evening of smooth jazz and fine cuisine. Our band performs classic jazz pieces while you enjoy a specially curated menu.",
+      price: "2,200,000₫ per person",
       image: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=80&w=2070&auto=format&fit=crop",
       icon: Music,
       category: "entertainment",
       includes: [
-        "Bữa tối 3 món",
-        "Cocktail chào mừng",
-        "Biểu diễn nhạc jazz trực tiếp",
-        "Chỗ ngồi đã đặt trước"
+        "3-course dinner",
+        "Welcome cocktail",
+        "Live jazz performance",
+        "Reserved seating"
       ]
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'Tất cả sự kiện' },
-    { id: 'tasting', label: 'Thưởng thức' },
-    { id: 'dining', label: 'Ẩm thực' },
-    { id: 'entertainment', label: 'Giải trí' }
+    { id: 'all', label: 'All Events' },
+    { id: 'tasting', label: 'Tasting' },
+    { id: 'dining', label: 'Dining' },
+    { id: 'entertainment', label: 'Entertainment' }
   ];
 
   const filteredEvents = filter === 'all'
@@ -179,10 +179,10 @@ export default function Events() {
     <section id="events" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-amber-600 font-medium">Sự kiện đặc biệt</span>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Sự kiện sắp tới</h2>
+          <span className="text-amber-600 font-medium">Special Events</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Tham gia cùng chúng tôi cho những trải nghiệm ẩm thực đặc biệt và những buổi tối đáng nhớ
+            Join us for special culinary experiences and memorable evenings
           </p>
         </div>
 
@@ -239,7 +239,7 @@ export default function Events() {
                   onClick={() => setSelectedEvent(event)}
                   className="w-full bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition flex items-center justify-center group"
                 >
-                  Xem chi tiết
+                  View Details
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -249,35 +249,35 @@ export default function Events() {
 
         <div className="mt-16 bg-amber-50 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Sự kiện riêng tư</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Private Events</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Tổ chức dịp đặc biệt của bạn trong không gian ăn uống sang trọng của chúng tôi. 
-              Từ sự kiện công ty đến lễ kỷ niệm thân mật, chúng tôi sẽ tạo ra một trải nghiệm 
-              đáng nhớ được thiết kế riêng theo nhu cầu của bạn.
+              Host your special occasion in our elegant dining space. 
+              From corporate events to intimate celebrations, we'll create a memorable 
+              experience tailored to your needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <Users className="h-8 w-8 text-amber-600 mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Sức chứa</h4>
-              <p className="text-gray-600">Lên đến 100 khách</p>
+              <h4 className="font-semibold mb-2">Capacity</h4>
+              <p className="text-gray-600">Up to 100 guests</p>
             </div>
             <div className="text-center">
               <ChefHat className="h-8 w-8 text-amber-600 mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Thực đơn tùy chỉnh</h4>
-              <p className="text-gray-600">Thực đơn được cá nhân hóa theo nhu cầu của bạn</p>
+              <h4 className="font-semibold mb-2">Customized Menu</h4>
+              <p className="text-gray-600">Menu personalized to your needs</p>
             </div>
             <div className="text-center">
               <Calendar className="h-8 w-8 text-amber-600 mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Có sẵn</h4>
-              <p className="text-gray-600">Mọi ngày trong tuần, cả buổi trưa và buổi tối</p>
+              <h4 className="font-semibold mb-2">Available</h4>
+              <p className="text-gray-600">Every day of the week, both lunch and dinner</p>
             </div>
           </div>
 
           <div className="mt-8 text-center">
             <button className="bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition inline-flex items-center">
-              Liên hệ để biết thêm thông tin
+              Contact for More Information
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
