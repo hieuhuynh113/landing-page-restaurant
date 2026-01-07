@@ -17,10 +17,10 @@ export default function Navbar() {
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
+          <a href="#home" className="flex items-center hover:opacity-80 transition">
             <UtensilsCrossed className="h-8 w-8 text-amber-600" />
             <span className="ml-2 text-2xl font-semibold text-gray-900">Saveur</span>
-          </div>
+          </a>
           
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
@@ -28,7 +28,8 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-900 hover:text-amber-600 transition"
+                  className="text-gray-900 hover:text-amber-600 transition focus:outline-none focus:ring-0 !outline-none"
+                  style={{ outline: 'none' }}
                 >
                   {item.name}
                 </a>
@@ -54,7 +55,8 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-gray-900 hover:text-amber-600 transition"
+                className="block px-3 py-2 text-gray-900 hover:text-amber-600 transition focus:outline-none focus:ring-0 !outline-none"
+                style={{ outline: 'none' }}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
