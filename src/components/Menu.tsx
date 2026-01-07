@@ -25,7 +25,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Seared Scallops",
     description: "Fresh scallops with lemon butter sauce",
-    price: "720.000₫",
+    price: "$32",
     image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=2070&auto=format&fit=crop",
     category: "starters",
     isNew: true,
@@ -40,7 +40,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Wagyu Beef",
     description: "Premium Wagyu beef with truffle mushroom sauce",
-    price: "1.450.000₫",
+    price: "$68",
     image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2070&auto=format&fit=crop",
     category: "main course",
     spicyLevel: 1,
@@ -56,7 +56,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Lobster Risotto",
     description: "Creamy Arborio rice with fresh lobster",
-    price: "990.000₫",
+    price: "$42",
     image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=2069&auto=format&fit=crop",
     category: "main course",
     isPopular: true,
@@ -71,7 +71,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Duck Confit",
     description: "Slow-cooked duck leg with cherry sauce",
-    price: "850.000₫",
+    price: "$38",
     image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?q=80&w=2070&auto=format&fit=crop",
     category: "main course",
     details: {
@@ -85,7 +85,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Truffle Mushroom Soup",
     description: "Creamy wild mushroom soup with truffle oil",
-    price: "360.000₫",
+    price: "$16",
     image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=2071&auto=format&fit=crop",
     category: "starters",
     details: {
@@ -99,7 +99,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Chocolate Soufflé",
     description: "Warm chocolate soufflé with vanilla ice cream",
-    price: "320.000₫",
+    price: "$14",
     image: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?q=80&w=2070&auto=format&fit=crop",
     category: "desserts",
     isNew: true,
@@ -114,7 +114,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Spicy Tuna Tartare",
     description: "Fresh tuna with Asian spices",
-    price: "540.000₫",
+    price: "$24",
     image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=2070&auto=format&fit=crop",
     category: "starters",
     spicyLevel: 2,
@@ -129,7 +129,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Artisan Cheese Board",
     description: "Selection of premium cheeses with accompaniments",
-    price: "620.000₫",
+    price: "$26",
     image: "https://images.unsplash.com/photo-1452195100486-9cc805987862?q=80&w=2069&auto=format&fit=crop",
     category: "desserts",
     details: {
