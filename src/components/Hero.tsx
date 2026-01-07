@@ -30,12 +30,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <button className="bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition flex items-center justify-center group">
+          <a href="#menu" className="bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition flex items-center justify-center group focus:outline-none focus:ring-0 !outline-none" style={{ outline: 'none' }}>
             View Menu <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white/10 transition">
+          </a>
+          <a href="#contact" className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white/10 transition focus:outline-none focus:ring-0 !outline-none" style={{ outline: 'none' }}>
             Book a Table
-          </button>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
